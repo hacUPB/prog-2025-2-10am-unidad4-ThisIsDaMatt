@@ -10,7 +10,9 @@ aeronave = {
     "velocidad_max": 954   # km/h
 }
 aeronave["altura"] = 16.9
-print(f"Modelo: {aeronave["modelo"]}, mide {aeronave["longitud"]} metros")
+
+for k, v in aeronave.items():
+    print(f"{k} --> {v}")
 
 # Diccionario con diferentes tipos de datos como valores
 vuelo = {
