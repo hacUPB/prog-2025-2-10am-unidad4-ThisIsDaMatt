@@ -35,19 +35,40 @@ if caso_b in opciones:
     
     if combustible <= capacidad:
         print("Simulando fases de vuelo...")
+        
+        # Calcular combustible necesario para descenso y aterrizaje
+        combustible_descenso = consumo * 0.85
+        combustible_aterrizaje = consumo * 0.9
+        combustible_reserva = combustible_descenso + combustible_aterrizaje
+        
+        # Recorrer todas las fases de vuelo
         for fase, factor in fases_vuelo:
             if combustible <= 0:
                 break
-
-            tiempo += 1
-            consumo_fase = consumo * factor
-            combustible -= consumo_fase
-
-            if combustible < 0:
-                combustible = 0
             
-            historia.append((tiempo, combustible))
-            print(f"Hora {tiempo} ({fase}): Quedan {combustible} kg")
+            # Si es la fase de Crucero, continuar hasta dejar combustible para descenso y aterrizaje
+            if fase == "Crucero":
+                while combustible > combustible_reserva:
+                    tiempo += 1
+                    consumo_fase = consumo * factor
+                    combustible -= consumo_fase
+                    
+                    if combustible < 0:
+                        combustible = 0
+                    
+                    historia.append((tiempo, fase, int(combustible)))
+                    print(f"Hora {tiempo} ({fase}): Quedan {int(combustible)} kg")
+            else:
+                # Para las demás fases, solo una hora
+                tiempo += 1
+                consumo_fase = consumo * factor
+                combustible -= consumo_fase
+                
+                if combustible < 0:
+                    combustible = 0
+                
+                historia.append((tiempo, fase, int(combustible)))
+                print(f"Hora {tiempo} ({fase}): Quedan {int(combustible)} kg")
         
         print("========================================")
         print(f"El {nombre} voló durante {tiempo} horas.")
@@ -57,4 +78,3 @@ if caso_b in opciones:
         print("Combustible excede la capacidad maxima. Intente una cantidad menor.")
 else:
     print("Opción de aeronave invalida.")
-
