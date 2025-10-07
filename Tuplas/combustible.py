@@ -23,7 +23,7 @@ if caso_b in opciones:
     combustible = int(input("Ingrese el combustible en kg: "))
     tiempo = 0
     
-    historial_vuelo = []
+    historia = []
     
     if combustible <= capacidad:
         while combustible > 0:
@@ -32,7 +32,7 @@ if caso_b in opciones:
             if combustible < 0:
                 combustible = 0
             
-            historial_vuelo.append((tiempo, combustible))
+            historia.append((tiempo, combustible))
             print(f"Hora {tiempo}: Quedan {combustible} kg")
         
         print("========================================")
