@@ -1,4 +1,4 @@
-eronaves = [
+aeronaves = [
     ("C172 Skyhawk", 30, 212),
     ("Airbus A320-200", 2300, 27200),
     ("Boeing 737-800", 3200, 26000),
