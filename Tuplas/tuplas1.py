@@ -46,7 +46,7 @@ numeros = (3, 12, 90, 45, 32)
 for n in numeros:
     print(n)
 
-# Condicionales con listas y tuplas
+# Condicionales con listas y tuplas.
 
 if 12 in numeros:
     print("El 12 es parte de la tupla")
