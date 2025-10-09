@@ -76,6 +76,45 @@ def caso_a():
     else:
         print("Opción de aeronave invalida.")
 
+def caso_b():
+    aeronaves = [
+        ("C172 Skyhawk", 30, 212),
+        ("Airbus A320-200", 2300, 27200),
+        ("Boeing 737-800", 3200, 26000),
+        ("Airbus A380-800", 17400, 320000)
+    ]
+
+    fases_vuelo = [
+        ("Despegue", 1.2),
+        ("Ascenso", 1.15),
+        ("Crucero", 1.0),
+        ("Descenso", 0.85),
+        ("Aterrizaje", 0.9)
+    ]
+
+    opciones = {"A": 0, "B": 1, "C": 2, "D": 3}
+    print("==============")
+    print("Listas usadas:")
+    print("==============")
+    print("Aeronaves:")
+    print("==========")
+    for aeronave in aeronaves:
+        print(f"{aeronave[0]} - Consumo: {aeronave[1]} kg/h, Capacidad: {aeronave[2]} kg")
+
+    print("===============")
+    print("Fases de vuelo:")
+    print("===============")
+    for fase, factor in fases_vuelo:
+        print(f"{fase} - Factor: {factor}")
+
+    print("====================")
+    print("Diccionarios usados:")
+    print("====================")
+    print("Opciones:")
+    print("=========")
+    for clave, valor in opciones.items():
+        print(f"{clave}: {valor}")
+
 def menu():
     control = True
     while True:
@@ -84,8 +123,9 @@ def menu():
         print("=====================================================")
         print("Desea ejecutar el programa?")
         print("A. Si")
-        print("B. No, salir")
-        print("============")
+        print("B. Solo mostrar listas y diccionarios")
+        print("C. No, salir")
+        print("=====================================")
 
         caso = input("Ingrese una opción: ").upper()
 
@@ -93,6 +133,8 @@ def menu():
             case "A":
                 caso_a()
             case "B":
+                caso_b()
+            case "C":
                 print("Saliendo del programa...")
                 break
             case _:
