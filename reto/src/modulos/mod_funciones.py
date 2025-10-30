@@ -279,8 +279,9 @@ def calcular_estadisticas():
                 for fila in filas[1:]:
                     if n_columna < len(fila):
                         valor = fila[n_columna].strip()
-                        if valor.replace('.', '', 1).replace('-', '', 1).isdigit():
-                            datos.append(float(valor))
+                        v_normalizado = valor.replace(',', '.')
+                        if v_normalizado and v_normalizado.replace('.', '', 1).replace('-', '', 1).isdigit():
+                            datos.append(float(v_normalizado))
                 
                 if datos:
                     n_datos = len(datos)
