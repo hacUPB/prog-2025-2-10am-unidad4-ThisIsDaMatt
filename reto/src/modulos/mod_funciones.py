@@ -71,6 +71,7 @@ def contar_palabras_caracteres():
     else:
         for i, f in enumerate(archivos_txt, 1):
             print(f"{i}. {f}")
+        print("========================")
 
         num = int(input("Selecciona un archivo: "))
         archivo = archivos_txt[num - 1]
@@ -104,6 +105,7 @@ def reemplazar_palabras():
     else:
         for i, f in enumerate(archivos_txt, 1):
             print(f"{i}. {f}")
+        print("========================")
 
         num = int(input("Selecciona un archivo: "))
         archivo = archivos_txt[num - 1]
@@ -155,6 +157,7 @@ def histograma_vocales():
     else:
         for i, f in enumerate(archivos_txt, 1):
             print(f"{i}. {f}")
+        print("========================")
 
         num = int(input("Selecciona un archivo: "))
         archivo = archivos_txt[num - 1]
@@ -211,6 +214,7 @@ def mostrar_15_filas():
     else:
         for i, f in enumerate(archivos_csv, 1):
             print(f"{i}. {f}")
+        print("========================")
 
         num = int(input("Selecciona un archivo: "))
         archivo = archivos_csv[num - 1]
@@ -247,6 +251,7 @@ def calcular_estadisticas():
     else:
         for i, f in enumerate(archivos_csv, 1):
             print(f"{i}. {f}")
+        print("========================")
         
         num = int(input("Selecciona un archivo: "))
         archivo = archivos_csv[num - 1]
@@ -318,6 +323,7 @@ def graficar_columna():
     else:
         for i, f in enumerate(archivos_csv, 1):
             print(f"{i}. {f}")
+        print("========================")
 
         num = int(input("Selecciona un archivo: "))
         archivo = archivos_csv[num - 1]
