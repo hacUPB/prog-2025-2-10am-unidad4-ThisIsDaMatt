@@ -32,17 +32,17 @@ def listar_archivos():
             elif archivo.endswith(".csv"):
                 csv_files.append(archivo)
         
-        print("===============================")
+        print("==========================")
         print("Archivos .txt encontrados:")
-        print("===============================")
+        print("==========================")
         if txt:
             for i, f in enumerate(txt, 1):
                 print(f"{i}. {f}")
         else:
             print("No se encontraron archivos .txt")
-        print("===============================")
+        print("==========================")
         print("Archivos .csv encontrados:")
-        print("===============================")
+        print("==========================")
         if csv_files:
             for i, f in enumerate(csv_files, 1):
                 print(f"{i}. {f}")
