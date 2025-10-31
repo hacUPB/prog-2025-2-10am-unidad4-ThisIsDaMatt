@@ -141,7 +141,7 @@ def reemplazar_palabras():
             print("Cambios no guardados.")
 
 
-def histograma_vocales():
+def histograma_vocales(): # Se reporta uso de IA para llevar a cabo el codigo de la línea 170 a 198 por Claude Sonnet 4.5 via GitHub Copilot.
     print("====================================")
     print("Histograma de ocurrencias de vocales")
     print("====================================")
@@ -308,7 +308,7 @@ def calcular_estadisticas():
                     print("No se encontraron datos numéricos en la columna seleccionada")
 
 
-def graficar_columna():
+def graficar_columna(): # Se reporta uso de IA para llevar a cabo el codigo de la línea 347 a 414 por Claude Sonnet 4.5 via GitHub Copilot. (No hecho completamente por IA, fue usada como una asistencia para preguntar como aplicar matplotlib)
     print("==========================")
     print("Graficar columna con datos")
     print("==========================")
@@ -416,3 +416,4 @@ def graficar_columna():
                     print("No se encontraron datos numéricos")
             else:
                 print("No se encontraron datos numéricos")
+
