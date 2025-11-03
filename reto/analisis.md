@@ -1,6 +1,8 @@
 # Analisis del reto
 Este archivo Markdown tiene la finalidad de explicar como se usaron los conceptos que aprendí en esta unidad, la unidad 4, 
 los cuales no solo fueron utiles, sino fundamentales en la realizacion y programación de este reto
+## Funcionamiento en video
+https://www.youtube.com/watch?v=_wpIGqlQoLg
 ## Conceptos usados de las unidades
 ### Unidades pasadas
 Las cosas que se usaron que no corresponden a esta unidad, sino a pasadas (pero que vale la pena recalcar) son: 
